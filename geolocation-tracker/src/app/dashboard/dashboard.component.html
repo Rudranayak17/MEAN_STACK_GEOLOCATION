@@ -1,0 +1,46 @@
+<!-- dashboard.component.html -->
+<div class="dashboard">
+    <!-- User Details Section -->
+    <div class="user-details">
+      <img [src]="loggedInUser?.picture" alt="User Profile Image" />
+      <div class="user-info">
+        <h2>{{ loggedInUser?.name }}</h2>
+        <p>Email: {{ loggedInUser?.email }}</p>
+        <p>Email Verified: {{ loggedInUser?.email_verified ? "Yes" : "No" }}</p>
+      </div>
+    </div>
+  
+    <!-- History of Geolocation Section -->
+    <div>
+      <h2 style="text-align: center;">User-History of Geolocation</h2>
+  
+      <!-- Geolocation Table -->
+      <table class="geolocation-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Region</th>
+            <th>Country</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Local Date </th>
+            <th>Local time </th>
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr  *ngFor="let location of locationData">
+            <td>{{ location.name }}</td>
+            <td>{{ location.region }}</td>
+            <td>{{ location.country }}</td>
+            <td>{{ location.lat }}</td>
+            <td>{{ location.lon }}</td>
+            <td>{{ location.localtime | date:'yyyy-MM-dd ' }}</td>
+            <td>{{ location.localtime | date:'HH:mm:ss' }}</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

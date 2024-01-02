@@ -1,0 +1,30 @@
+<div class="home-content">
+ 
+  <div class="menu-toggle" (click)="toggleSidebar()">
+    <i class="ri-menu-line"></i>
+  </div>
+  <div class="home-main" *ngIf="!this.isSidebarOpen">
+    <div class="search">
+      <form class="form-style" (ngSubmit)="search()">
+        <input
+          [(ngModel)]="searchTerm"
+          id="search-input"
+          required
+          name="searchTerm"
+          placeholder="Enter country or city name"
+        />
+        <button type="submit"><i id="btn" class="ri-search-line"></i></button>
+      </form>
+    </div>
+    <div class="home-bottom">
+      <button routerLink="/dashboard" id="dashboard">dashboard</button>
+      <button id="logout" (click)="handleSignout()">Logout</button>
+    </div>
+  </div>
+  <app-map
+    
+    id="map"
+    [searchTerm]="searchTerm"
+    (updateMapData)="handleUpdateMapData($event)"
+  ></app-map>
+</div>

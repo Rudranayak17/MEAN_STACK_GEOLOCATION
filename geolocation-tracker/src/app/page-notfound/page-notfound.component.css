@@ -1,0 +1,14 @@
+/* not-found.component.css */
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .not-found-message {
+    font-size: 24px;
+    color: #555;
+  }
+  

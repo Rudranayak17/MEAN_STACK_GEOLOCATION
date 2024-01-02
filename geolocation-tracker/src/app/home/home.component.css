@@ -1,0 +1,131 @@
+.home-content {
+    display: flex;
+    background-color: #848282;
+ 
+}
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+    justify-content: space-between;
+    background-color: #848282;
+    border-right: 2px solid black;
+    height: 100vh;
+    width: 20%;
+    padding-right: 1.3rem;
+}
+.form-style{
+    margin-top: 1rem;
+    display: flex;
+    border:1px solid red;
+   gap: 0.1rem;
+    align-items: center;
+    
+}
+.form-style input, .form-style button{
+    font-size: larger;
+}
+
+.menu-toggle {
+    display: none; /* Initially hide the menu toggle button */
+    cursor: pointer;
+    font-size: x-large;
+    margin-top: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+
+
+#btn {
+    
+    
+    cursor: pointer;
+}
+
+#map {
+    height: 100vh;
+    width: 80%;
+}
+
+.home-bottom {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 85%;
+}
+
+#dashboard {
+    cursor: pointer;
+    font-size: larger;
+    padding: 1rem;
+    background-color: coral;
+    border-radius: 1rem;
+}
+
+#logout {
+    cursor: pointer;
+    font-size: larger;
+    padding: 1rem;
+    background-color: rgb(207, 68, 68);
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+@media only screen and (max-width: 1257px) {
+    .form-style input, .form-style button{
+        font-size: medium;
+        text-align: center;
+    }
+    
+  }
+/* Media query for mobile and tablet */
+@media only screen and (max-width: 768px) {
+    .home-main {
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 0;
+    }
+    .form-style{
+        
+        margin-top: 1rem;
+    
+        
+        flex-direction:column ;
+        flex-wrap: wrap;
+     
+       gap: 1px;
+        align-items: center;
+        
+    }
+   
+
+    .form-style input, .form-style button{
+
+        font-size: small;
+    }
+    .menu-toggle {
+    
+        display: block;
+        
+        
+     
+        font-size: x-large;
+        cursor: pointer;
+        /* Add margin for spacing */
+    }
+
+    #map {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .form-style input{
+width: 100%;
+    }
+    #logout,#dashboard{
+        font-size: small;
+        text-align: center;
+    }
+  }

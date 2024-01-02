@@ -1,0 +1,7 @@
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the login div to 100% of the viewport height */
+
+}

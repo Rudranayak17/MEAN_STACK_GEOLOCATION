@@ -1,0 +1,53 @@
+/* dashboard.component.css */
+.dashboard{
+    height: 100vh;
+}
+.user-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  padding: 20px;
+/* background-color: #f4f4f4;Add your desired background color */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  max-width: 300px; /* Adjust the max-width based on your design */
+}
+/* History of Geolocation Section */
+.geolocation-table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 25px;
+  }
+  
+  .geolocation-table th,
+  .geolocation-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+@media screen and (min-width: 768px) {
+  .user-details {
+    flex-direction: column;
+  }
+
+  .user-info {
+    margin-left: 20px;
+  }
+  .geolocation-table th,
+  .geolocation-table td {
+    font-size: 14px;
+  }
+}
